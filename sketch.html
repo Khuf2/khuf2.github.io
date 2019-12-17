@@ -1,39 +1,41 @@
 <html>
     <head>
         <title>Theo Novak's Gallery</title>
-        
-        <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./styles/sticky.css">
         <link rel="stylesheet" type="text/css" href="./styles/lightbox.min.css">
         <script src="javascript/lightbox-plus-jquery.min.js"></script>
         <script src="javascript/lightbox-options.js"></script>
     </head>
-
     <body>
-
         <div class="header">
-                <h1><div class="insta-style"><a href="http://instagram.com/skonchy_doo" target="_blank"><img height="50" width = "75" src="https://icon-library.net/images/instagram-circle-icon-png/instagram-circle-icon-png-24.jpg" alt="its pat"></a></div>
-                    Sketches
-                </h1>
+          <img id="pic" height="100px" width="100px" src="./galleryImages/Cowboy Icon/cowboyClassic.small.png">
+          <a id="icons" href="http://instagram.com/skonchy_doo" target="_blank"><img height="50" width = "75" src="https://icon-library.net/images/instagram-circle-icon-png/instagram-circle-icon-png-24.jpg" alt="Instagram"></a>
+          <h1 id="tit">Sketches</h1>
         </div>
-        <h5>
-            <div class="homeBar">
-                    <button class="lbtn" onclick= "window.location.href='./index.html'"></a> Home</button>
-                    <button class="lbtn" onclick= "window.location.href='./bio.html'"> Bio</button>
+
+        <div class="navbar" id="navbar">
+            <a href="./index.html">Home</a>
+            <a href="./bio.html">About Me</a>
+            <a href="https://github.com/Khuf2" target="_blank">Github</a>
+            <div class="dropdown">
+              <button class="dropbtn">Art
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="./fullGallery.html">All</a>
+                <a href="./classic.html">Classic</a>
+                <a href="./pen.html">Black and White</a>
+                <a href="./color.html">Colorful</a>
+                <a class="active" href="./sketch.html">Sketches</a>
+                <a href="./other.html">Other</a>
+              </div>
             </div>
-        </h5>
-
-
-        <div class="myBtnContainer">
-            <button class="btn" onclick= "window.location.href='./fullGallery.html'"></a> All Works</button>
-            <button class="btn" onclick= "window.location.href='./classic.html'"> Classics</button>
-            <button class="btn active" onclick="window.location.href='./sketch.html'"> Sketch</button>
-            <button class="btn" onclick= "window.location.href='./pen.html'"> Pen</button>
-            <button class="btn" onclick="window.location.href='./color.html'"> Color</button>
-            <button class="btn" onclick="window.location.href='./other.html'"> Other Mediums</button>
-        </div>
-
+          </div>
+        
+        <script type="text/javascript" src="./javascript/sticky.js"></script>
+        
         <div class="gallery">
-
             <a href="./galleryImages/beavis/beavis.jpg" data-lightbox="mygallery" data-title="Beavis"><img height="200" width="200" src= "./galleryImages/beavis/beavis.small.png"></a>
             <a href="./galleryImages/eatCigs/eatCigs.jpg" data-lightbox="mygallery" data-title="Cig Eater"><img height="200" width="200" src= "./galleryImages/eatCigs/eatCigs.small.png"></a>
             <a href="./galleryImages/infantry/infantry.jpg" data-lightbox="mygallery" data-title="Infantry"><img height="200" width="200" src= "./galleryImages/infantry/infantry.small.png"></a>
@@ -49,7 +51,5 @@
             
             <a href="./galleryImages/whatsGood/whatsGood.jpg" data-lightbox="mygallery" data-title="What's Good?"><img height="200" width="200" src= "./galleryImages/whatsGood/whatsGood.small.png"></a>
         </div>
-
     </body>
-
 </html>

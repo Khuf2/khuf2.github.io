@@ -2,7 +2,7 @@
     <head>
         <title>Theo Novak's Gallery</title>
         
-        <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="./styles/sticky.css">
         <link rel="stylesheet" type="text/css" href="./styles/lightbox.min.css">
         <script src="javascript/lightbox-plus-jquery.min.js"></script>
     </head>
@@ -10,40 +10,31 @@
     <body>
 
         <div class="header">
-                <h1><div class="insta-style"><a href="http://instagram.com/skonchy_doo" target="_blank"><img height="50" width = "75" src="https://icon-library.net/images/instagram-circle-icon-png/instagram-circle-icon-png-24.jpg" alt="its pat"></a></div>
-                    Bio
-                </h1>
-        </div>
-        <h5>
-                <div class="homeBar">
-                        <button class="lbtn" onclick= "window.location.href='./index.html'"> Home</button>
-                        <button class="lbtn active" onclick= "window.location.href='./bio.html'"> Bio</button>
+            <img id="pic" height="100px" width="100px" src="./galleryImages/Cowboy Icon/cowboyClassic.small.png">
+            <a id="icons" href="http://instagram.com/skonchy_doo" target="_blank"><img height="50" width = "75" src="https://icon-library.net/images/instagram-circle-icon-png/instagram-circle-icon-png-24.jpg" alt="Instagram"></a>
+            <h1 id="tit">About Me</h1>
+          </div>
+  
+          <div class="navbar" id="navbar">
+              <a href="./index.html">Home</a>
+              <a class="active" href="./bio.html">About Me</a>
+              <a href="https://github.com/Khuf2" target="_blank">Github</a>
+              <div class="dropdown">
+                <button class="dropbtn">Art
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="./fullGallery.html">All</a>
+                  <a href="./classic.html">Classic</a>
+                  <a href="./pen.html">Black and White</a>
+                  <a href="./color.html">Colorful</a>
+                  <a href="./sketch.html">Sketches</a>
+                  <a href="./other.html">Other</a>
                 </div>
-        </h5>
-
-        <div class="myBtnContainer">
-            <button class="btn" onclick= "window.location.href='./fullGallery.html'"></a> All Works</button>
-            <button class="btn" onclick= "window.location.href='./classic.html'"> Classics</button>
-            <button class="btn" onclick="window.location.href='./sketch.html'"> Sketch</button>
-            <button class="btn" onclick= "window.location.href='./pen.html'"> Pen</button>
-            <button class="btn" onclick="window.location.href='./color.html'"> Color</button>
-            <button class="btn" onclick="window.location.href='./other.html'"> Other Mediums</button>
-        </div>
-
-        <div class="sideBar">
-            s
-        </div>
-
-        <div class="text-box">
-            This is the text that I am inserting into my body page. Because the body might now have a default, this may not be in the center. Look there if its fucky. Styles.css yadayadyadyadyaadyayadaaskdasldkjaslkdjaslkdjalskdjlsakdjaskldjalskdjalskdjlaskdjlaksdj
-        </div>
-
-        <p><img class="bioImg"src="./galleryImages/alchesmist/alchemist.jpg" alt="Pineapple" style="width:170px;height:170px;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, 
-            auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, 
-            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor 
-            porta. Cras ac leo purus. Mauris quis diam velit.
-        </p>
+              </div>
+            </div>
+          
+          <script type="text/javascript" src="./javascript/sticky.js"></script>
         
     </body>
 
