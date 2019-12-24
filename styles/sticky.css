@@ -9,6 +9,60 @@ body {
 
 }
 
+.image {
+    /*
+    * for .small.png image option
+    height: 200px;
+    width: 200px;
+    */
+    /* for full-size image option (non-square) */
+    max-width: 300px;
+    max-height: 300px;
+    padding: 10px;
+    background-color: rgb(114, 96, 96);
+    /*
+    * I dont think we want the image to flex-grow in the final product. (distortion of photos)
+    */
+    flex: 0 1 200px;
+}
+
+.text {
+    flex-wrap: wrap;
+    color: black;
+    flex: 4 1 200px;
+    padding: 10px;
+}
+
+.scene {
+    height: 400px;
+    width: 400px;
+    background-color: antiquewhite;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: inherit;
+    padding: 10px;
+    /*
+    * If we choose to change this to row, we can then also choose to increase the height?
+    * OR
+    * If its a flex container as we see it, it may just increase naturally in size over 200px.
+    * ^^ This is confirmed TRUE.
+    */
+
+}
+
+.bio {
+    background-color: aliceblue;
+}
+
 .header {
     background-image: linear-gradient(to bottom right, red, yellow);
     color: aliceblue;
@@ -41,6 +95,13 @@ body {
 
 #icons {
     grid-area: icons;
+    justify-self: start;
+    align-self: center;
+    /*
+    border-radius: 25px;
+    padding-right: 13px;
+    padding-top: 3px;
+    */
 }
 
 .navbar {
@@ -146,6 +207,7 @@ body {
     transition: 0.1s;
     background-color: rgb(26, 16, 2);
     padding: 15px;
+    margin: 2px;
     width:200px;
 }
 
