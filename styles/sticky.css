@@ -9,20 +9,36 @@ body {
 
 }
 
+/*
+li {
+    list-style: none;
+    margin: 5px 5px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 12px;
+    color: #811f1f;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    transition: 0.5s;
+    background-color: rgb(114, 96, 96, 0.3);
+    position: relative;
+    right:40px;
+    bottom: 14px;
+    
+}
+
+li:hover {
+    color: #292929;
+    border: 1px solid #292929;
+    transition: 0.5s;
+}
+*/
+
 .image {
-    /*
-    * for .small.png image option
-    height: 200px;
-    width: 200px;
-    */
-    /* for full-size image option (non-square) */
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     padding: 10px;
     background-color: rgb(114, 96, 96);
-    /*
-    * I dont think we want the image to flex-grow in the final product. (distortion of photos)
-    */
     flex: 0 1 200px;
 }
 
@@ -33,30 +49,11 @@ body {
     padding: 10px;
 }
 
-.scene {
-    height: 400px;
-    width: 400px;
-    background-color: antiquewhite;
-    overflow: scroll;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-}
-
 .row {
-    margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     background-color: inherit;
-    padding: 10px;
-    /*
-    * If we choose to change this to row, we can then also choose to increase the height?
-    * OR
-    * If its a flex container as we see it, it may just increase naturally in size over 200px.
-    * ^^ This is confirmed TRUE.
-    */
-
+    padding: 20px 10px 10px 10px;
 }
 
 .bio {
@@ -70,11 +67,10 @@ body {
     margin-bottom: 10px;
     text-align: left;
     display: grid;
-    grid-column-gap: 30px;
-    grid-template-columns: 100px 900px;
-    grid-template-rows: 50px 50px;
+    grid-template-columns: 140px 900px;
+    grid-template-rows: 60px 50px;
     grid-template-areas: 
-    "pic icons"
+    "pic ."
     "pic tit";
 }
 
@@ -91,22 +87,24 @@ body {
 
 #tit {
     grid-area: tit;
+    display:flex;
 }
 
-#icons {
-    grid-area: icons;
-    justify-self: start;
-    align-self: center;
-    /*
-    border-radius: 25px;
-    padding-right: 13px;
-    padding-top: 3px;
-    */
+.navbar a.icon {
+    text-decoration: none; 
+    float: right; 
+    padding-bottom: 17px;
 }
 
 .navbar {
     overflow: hidden;
     background-color: rgb(198, 90, 74);
+    margin-bottom: 20px;
+}
+
+.bordered {
+    border:1px solid #000000;
+    border-radius: 0 0 4px 4px;
 }
 
 .navbar a {
@@ -121,6 +119,10 @@ body {
     background-color: rgb(148, 13, 13);
     color:white;
  }
+
+ a:visited {
+    color: inherit;
+}
 /*
 .navbar a.active:hover{
     background-color: goldenrod;
@@ -179,10 +181,12 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*
 .content {
     padding: 16px;
     background-color: rgb(114, 96, 96);
 }
+*/
 
 .wrapper {
     grid-area: wrapper;
@@ -191,11 +195,12 @@ body {
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 1100px;
 }
 
 .gallery {
     margin: 50px 50px 50px 50px;
+    padding: 25px 0 20px 0;
     max-width: 1000px;
     text-align: center;
     margin-top: 20px;
@@ -219,9 +224,14 @@ body {
 .cover-style {
     height: 500px;
     background-color: aliceblue;
-    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.relative img {
+    margin: 10px;
+    padding: 5px;
+    background-color: black;
 }
 
 div.relative {
@@ -238,3 +248,10 @@ div.relative {
     margin-left: 25px;
     background-color: rgb(126, 51, 97);
 }
+
+@media screen and (max-width: 1100px) {
+    .navbar a.icon {
+      float: left;
+    }
+}
+
