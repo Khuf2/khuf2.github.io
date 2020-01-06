@@ -9,37 +9,26 @@ body {
 
 }
 
-/*
-li {
-    list-style: none;
-    margin: 5px 5px;
-    display: inline-block;
-    font-size: 20px;
-    padding: 12px 12px;
-    color: #811f1f;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 50%;
-    transition: 0.5s;
-    background-color: rgb(114, 96, 96, 0.3);
-    position: relative;
-    right:40px;
-    bottom: 14px;
-    
+.taggedImg {
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 250px 30px;
+    flex: 0 1 200px;
+    padding:10px;
+    grid-row-gap: 5px;
+    grid-template-areas: 
+    "image"
+    ".";
 }
 
-li:hover {
-    color: #292929;
-    border: 1px solid #292929;
-    transition: 0.5s;
-}
-*/
-
-.image {
+.image  {
+    flex: 0 1 200px;
     max-width: 250px;
     max-height: 250px;
     padding: 10px;
     background-color: rgb(114, 96, 96);
-    flex: 0 1 200px;
+    
+    
 }
 
 .text {
@@ -57,6 +46,15 @@ li:hover {
 }
 
 .bio {
+    background-color: aliceblue;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+.footer {
+    height: 25px;
     background-color: aliceblue;
 }
 
@@ -155,9 +153,9 @@ li:hover {
 .dropdown-content {
     display: none;
     position: relative;
-    /*
-    # - This makes the dropdown broken/detached from the dropdown-hoverable, BUT it does leave the navbar un-expanded
-    position: fixed;
+    /* POSITION *
+    * position: relative; - This makes the navbar expand :(, BUT it does keep itself connected and sticky effectively, no awkward jumps
+    * position: fixed; - This makes the dropdown broken/detached from the dropdown-hoverable, BUT it does leave the navbar un-expanded
     */
     background-color: goldenrod;
     min-width: 160px;
@@ -206,6 +204,10 @@ li:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: aliceblue;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 .gallery img {
@@ -226,6 +228,10 @@ li:hover {
     background-color: aliceblue;
     margin-bottom: 20px;
     text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 .relative img {
@@ -249,9 +255,117 @@ div.relative {
     background-color: rgb(126, 51, 97);
 }
 
+.test p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .navbar a.icon {
       float: left;
     }
+}
+
+@import "https://fonts.googleapis.com/css?family=Raleway";
+
+#contact { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 200px; 
+  height: 30px; 
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+  text-transform: uppercase; 
+  font-size: 11px; 
+  border:0px solid #000000;
+  border-radius: 4px 4px 4px 4px;
+}
+
+#contact:hover { background: #666; }
+#contact:active { background: #444; }
+
+#contactForm { 
+  display: none;
+
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  z-index: 99;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  text-transform: uppercase; 
+  
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 50px;
 }
 
