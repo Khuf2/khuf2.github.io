@@ -73,23 +73,23 @@
           <div class="row">      
             <script src="contact.js"></script>
             <div class="text" style="font-size: 20px;">
+              
               <br> <br> <br> <br> <br> <br> <br> <br>
               <div id="contact">Contact</div>
 
               <div id="contactForm">
-
-                <h1>Keep in touch!</h1>
+                <h1>Send me an Email!</h1>
                 <small>I'll get back to you as quickly as possible</small>
-  
-                <form action="#">
-                  <input placeholder="Name" type="text" required />
-                  <input placeholder="Email" type="email" required />
-                  <input placeholder="Subject" type="text" required />
-                  <textarea placeholder="Comment"></textarea>
+                <form action="https://formspree.io/xzbdlqno" method="POST">
+
+                  <input placeholder="Name" type="text" name="name" required />
+                  <input placeholder="Email" type="email" name="_replyto" required />
+                  <input placeholder="Subject" type="subject" name="subject"required />
+                  <textarea placeholder="Comment" name="message" required/></textarea>
                   <input class="formBtn" type="submit" />
                   <input class="formBtn" type="reset" />
-                </form>
-              </div>
+                </form>  
+              </div> 
             </div>
             <div class="taggedImg">
               <img class="image" style="justify-self: right" src="galleryImages/crunchtime/crunchtime.jpg">
