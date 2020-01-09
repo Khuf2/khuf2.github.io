@@ -28,7 +28,6 @@ body {
     padding: 10px;
     background-color: rgb(114, 96, 96);
     
-    
 }
 
 .text {
@@ -38,7 +37,7 @@ body {
     padding: 10px;
 }
 
-.row {
+.slat {
     display: flex;
     flex-wrap: wrap;
     background-color: inherit;
@@ -196,33 +195,6 @@ body {
     width: 1100px;
 }
 
-.gallery {
-    margin: 50px 50px 50px 50px;
-    padding: 25px 0 20px 0;
-    max-width: 1000px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: aliceblue;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
-}
-
-.gallery img {
-    transition: 0.1s;
-    background-color: rgb(26, 16, 2);
-    padding: 15px;
-    margin: 2px;
-    width:200px;
-}
-
-.gallery img:hover {
-    filter: contrast(200%);
-    transform: scale(1.1);
-}
-
 .cover-style {
     height: 500px;
     background-color: aliceblue;
@@ -368,4 +340,3 @@ textarea { height: 80px; resize: none; }
   border: none;
   height: 50px;
 }
-
