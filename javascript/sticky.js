@@ -4,8 +4,6 @@ window.onscroll = function() {myFunction()};
 // Get the navbar
 var navbar = document.getElementById("navbar");
 
-var dropdownContent = document.getElementById("dropdown-content");
-
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
@@ -13,9 +11,7 @@ var sticky = navbar.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-    dropdownContent.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
-    dropdownContent.classList.remove("sticky");
   }
 }

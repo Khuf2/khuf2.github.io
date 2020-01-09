@@ -191,6 +191,7 @@ body {
 
 .sticky {
     position: fixed;
+    z-index: 99;
     top: 0;
     width: 1100px;
 }
