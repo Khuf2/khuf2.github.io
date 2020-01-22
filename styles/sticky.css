@@ -53,7 +53,8 @@ body {
 }
 
 .bio {
-    background-color: aliceblue;
+    background-color: var(--color2);
+    margin-top: 20px;
     animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
@@ -66,13 +67,9 @@ body {
     background-color: var(--color1);
 }
 
-.footer p {
-    
-}
-
 .header {
     background-color: var(--color1);
-    color: aliceblue;
+    color: var(--color2);
     padding: 20px;
     margin-bottom: 10px;
     text-align: left;
@@ -109,6 +106,10 @@ body {
 .navbar {
     overflow: hidden;
     background-color: var(--color1);
+}
+
+.nav-wrapper {
+    height: 50px;
     margin-bottom: 20px;
 }
 
