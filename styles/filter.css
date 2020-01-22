@@ -5,7 +5,7 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: aliceblue;
+    background-color: var(--color2);
     animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
@@ -20,15 +20,15 @@
 
     display:flex; 
     justify-content: center; 
-    background-color: rgb(224, 207, 207); 
+    background-color: var(--color1); 
     padding: 10px; 
-    border: 3px solid #000000; 
+    border: 3px solid var(--color2); 
     border-radius: 8px;
 }
 
 .gallery img {
     transition: 0.1s;
-    background-color: rgb(26, 16, 2);
+    background-color: var(--color1);
     padding: 15px;
     margin: 2px;
     width:200px;
@@ -40,11 +40,11 @@
 }
   
 .content {
-    background-color: white;
+    background-color: var(--color2);
   }
 
   .row {
-    background-color: aliceblue;
+    background-color: var(--color2);
   }
   
   /* Add padding BETWEEN each column */
@@ -106,7 +106,7 @@
 }
 
 .btn-5 {
-    background-color: rgb(198, 90, 74);
+    background-color: var(--color1);
     border: 0 solid;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
     outline: 1px solid;
@@ -118,7 +118,7 @@
   
 .btn-5:hover {
     border: 1px solid;
-    border-color: black;
+    border-color: var(--color2);
     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
@@ -126,6 +126,6 @@
 }
 
   .btn.active {
-    background-color: #666;
-    color: white;
+    background-color: var(--color2);
+    color: black;
   }
