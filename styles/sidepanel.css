@@ -106,8 +106,6 @@
 
 .sidepanel  {
     width: 0;
-    position: static;
-    z-index: 40;
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s ease-out;
