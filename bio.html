@@ -7,6 +7,9 @@
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="./galleryImages/Cowboy Icon/cowboyClassic.small.png">
         <script src="javascript/lightbox-plus-jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./styles/filter.css">
+        <link rel="stylesheet" type="text/css" href="./styles/sidepanel.css">
+        <link href="https://fonts.googleapis.com/css?family=Bangers|Dosis&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -18,6 +21,7 @@
   
         <div class="nav-wrapper">
           <div class="navbar bordered" id="navbar">
+            <a id="openbtn" class="openbtn" onclick="toggleNav()">☰</a>
             <a href="./index.html">Home</a>
             <a class="active" href="./bio.html">About Me</a>
             <a href="./fullGallery.html">Gallery</a>
@@ -29,66 +33,98 @@
         </div>
         <script type="text/javascript" src="./javascript/sticky.js"></script>
         
-        <div class="bio">
-          <div class="slat" style="text-align: center; margin-left: auto; margin-right: auto; width: 50%;">
-            <div class="text" style="font-size: 25px;"><strong> Engaging and clever cartoons that embrace the arbitrary, and actively prompt you to question their existence.</strong>
-            </div>
-          </div>
-          <div class="slat">
-              <img class="image" src="images/prof_pic_bio.png">
-              <div class="text" style="font-size: 20px;">
-                If you thrive on confusion and appreciate the random, I’m your guy. As a youthful and experimental online cartoonist, I’m a refreshing addition to your Instagram 
-                feed and a bold character designer for personalized logos, branding, and commissions. <br> <br> 
-                I’m a mixed-media artist from the San Francisco Bay Area who designs outlandish cartoon characters that merge humor with the surreal. I strive to create 
-                stimulating and provocative artworks that can be enjoyed by any audience because of their playful form, but also retain the capacity for deeper themes and intrigue. 
-                I primarily want to catch your attention, and once you’re hooked you can continue to revel in the hectic visual components, or delve further into how a piece 
-                connects with your story.
+
+        <div id="bioContent">
+
+          <div class="bio">
+            <div class="slat" style="text-align: center; margin-left: auto; margin-right: auto; width: 50%;">
+              <div class="text" style="font-size: 25px;"><strong> Engaging and clever cartoons that embrace the arbitrary, and actively prompt you to question their existence.</strong>
               </div>
-          </div>
-          <div class="slat">      
-            <div class="text" style="font-size: 20px;">
-              Personality is very important to me when I draw. It’s undeniably a key facet of an art piece, which allows a work to radiate an emotion, energy, or attitude. 
-              Anyone viewing the artwork can then enter a dialogue with the piece, connecting their own experiences to the moods bottled into each one. From manic joy to debilitating 
-              stress, I hope you can find a drawing in my gallery that resonates with you. <br> <br>
-              As far as professional work, I have been featured in a local gallery in my hometown of Menlo Park, and have done several album covers and concert posters for local musicians 
-              in Menlo Park and Santa Cruz. If you have any questions, commissions, or collaborations, contact me at the links in the toolbar above, or at my email below.
             </div>
-            <div class="taggedImg">
-              <img class="image" src="galleryImages/manic/manic.jpg">
-              <p class="tag" style="color:#000000; text-align: right; position: relative; left:7px"><i>Manic</i></p>
+            <div class="slat">
+                <img class="image" src="images/prof_pic_bio.png">
+                <div class="text" style="font-size: 20px;">
+                  If you thrive on confusion and appreciate the random, I’m your guy. As a youthful and experimental online cartoonist, I’m a refreshing addition to your Instagram 
+                  feed and a bold character designer for personalized logos, branding, and commissions. <br> <br> 
+                  I’m a mixed-media artist from the San Francisco Bay Area who designs outlandish cartoon characters that merge humor with the surreal. I strive to create 
+                  stimulating and provocative artworks that can be enjoyed by any audience because of their playful form, but also retain the capacity for deeper themes and intrigue. 
+                  I primarily want to catch your attention, and once you’re hooked you can continue to revel in the hectic visual components, or delve further into how a piece 
+                  connects with your story.
+                </div>
             </div>
-            
-
-            
-          </div>
-          <div class="slat">      
-            <script src="javascript/contact.js"></script>
-            <div class="text" style="font-size: 20px;">
+            <div class="slat">      
+              <div class="text" style="font-size: 20px;">
+                Personality is very important to me when I draw. It’s undeniably a key facet of an art piece, which allows a work to radiate an emotion, energy, or attitude. 
+                Anyone viewing the artwork can then enter a dialogue with the piece, connecting their own experiences to the moods bottled into each one. From manic joy to debilitating 
+                stress, I hope you can find a drawing in my gallery that resonates with you. <br> <br>
+                As far as professional work, I have been featured in a local gallery in my hometown of Menlo Park, and have done several album covers and concert posters for local musicians 
+                in Menlo Park and Santa Cruz. If you have any questions, commissions, or collaborations, contact me at the links in the toolbar above, or at my email below.
+              </div>
+              <div class="taggedImg">
+                <img class="image" src="galleryImages/manic/manic.jpg">
+                <p class="tag" style="color:#000000; text-align: right; position: relative; left:7px"><i>Manic</i></p>
+              </div>
               
-              <br> <br> <br> <br> <br> <br> <br> <br>
-              <div id="contact">Contact</div>
 
-              <div id="contactForm">
-                <h1>Send me an Email!</h1>
-                <small>I'll get back to you as quickly as possible</small>
-                <form action="https://formspree.io/xzbdlqno" method="POST">
+              
+            </div>
+            <div class="slat">      
+              <script src="javascript/contact.js"></script>
+              <div class="text" style="font-size: 20px;">
+                
+                <br> <br> <br> <br> <br> <br> <br> <br>
+                <div id="contact">Contact</div>
 
-                  <input placeholder="Name" type="text" name="name" required />
-                  <input placeholder="Email" type="email" name="_replyto" required />
-                  <input placeholder="Subject" type="subject" name="subject"required />
-                  <textarea placeholder="Comment" name="message" required/></textarea>
-                  <input class="formBtn" type="submit" />
-                  <input class="formBtn" type="reset" />
-                </form>  
-              </div> 
+                <div id="contactForm">
+                  <h1>Send me an Email!</h1>
+                  <small>I'll get back to you as quickly as possible</small>
+                  <form action="https://formspree.io/xzbdlqno" method="POST">
+
+                    <input placeholder="Name" type="text" name="name" required />
+                    <input placeholder="Email" type="email" name="_replyto" required />
+                    <input placeholder="Subject" type="subject" name="subject"required />
+                    <textarea placeholder="Comment" name="message" required/></textarea>
+                    <input class="formBtn" type="submit" />
+                    <input class="formBtn" type="reset" />
+                  </form>  
+                </div> 
+              </div>
+              <div class="taggedImg">
+                <img class="image" style="justify-self: right" src="galleryImages/crunchtime/crunchtime.jpg">
+                <p class="tag" style="color:#000000; text-align: right;"><i>Crunchtime</i></p>
+              </div>
+              
             </div>
-            <div class="taggedImg">
-              <img class="image" style="justify-self: right" src="galleryImages/crunchtime/crunchtime.jpg">
-              <p class="tag" style="color:#000000; text-align: right;"><i>Crunchtime</i></p>
+          </div>
+          <div class="sidepanel" id="mySidepanel">
+            <div id="sidebar">
+              
+              <img id="chip" src="https://i.imgur.com/IGTfQ1n.jpg">
+                
+              <div id="social">
+                <a class="icon" href="https://instagram.com/skonchy_doo" target="_blank"><i class="fa fa-instagram fa-4x icon-3d" aria-hidden="true"></i></a>
+                <a class="icon" href="https://www.linkedin.com/in/theo-novak/" target="_blank"><i class="fa fa-linkedin fa-4x icon-3d"></i></a>
+                <a class="icon" href="https://github.com/Khuf2" target="_blank"><i class="fa fa-github fa-4x icon-3d"></i></a>
+              </div>
+              
+              <div id="quoteDay">
+                <h1>Words to Live By:</h1>
+                <h4>"Seize the hams while they're ripe."</h4>
+              </div>
+              
+              <div class="post">
+                <h1 class="title">Latest Post</h1>
+                <div class="postPic">
+                  <a href="./galleryImages/deuce/deuce.jpg" data-lightbox="latestpost" data-title="Deuce"><img src= "./galleryImages/deuce/deuce.small.png"></a>
+                </div>
+                <p class="description">"Deuce" - Wilder's West IV</p>
+              </div>
             </div>
-            
+            <script src="javascript/sidepanel.js"></script>
+
           </div>
         </div>
+
         <div class="footer">
           <p class="disclaimer">This work is the intellectual property of Theo Novak and should not be redistributed or printed without consent from the artist.</p>
           <p class="at">@skonchy_doo</p>

@@ -1,13 +1,35 @@
+#gallContent {
+  display: grid;
+  margin: 20px 50px 20px 50px;
+  grid-column-gap: 20px;
+  grid-template-areas: 
+  "sidepanel gallery";
+}
+
+#indexContent {
+  display: grid;
+  margin: 20px 50px 20px 50px;
+  grid-column-gap: 20px;
+  grid-template-columns: min-content auto;
+  grid-template-areas: 
+  "sidepanel coverstyle";
+}
+
+#bioContent {
+  display: grid;
+  margin: 20px 50px 20px 50px;
+  grid-column-gap: 20px;
+  grid-template-columns: min-content auto;
+  grid-template-areas: 
+  "sidepanel bio";
+}
+
 .gallery {
-  margin: 50px 50px 50px 50px;
+  grid-area: gallery;
   padding: 15px 10px 15px 10px;
-  /*
-  max-width: 1050px;
-  */
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
   background-color: rgba(var(--color2), 0.8);
+  overflow-x: hidden;
   animation: fadein 2s;
   -moz-animation: fadein 2s; /* Firefox */
   -webkit-animation: fadein 2s; /* Safari and Chrome */
@@ -29,7 +51,7 @@
 }
 
 .gallery img {
-  transition: 0.1s;
+  transition: filter 0.1s, transform 0.1s, width 0.7s, height 0.7s, padding 0.7s;
   background-color: rgba(var(--color1), 0.8);
   padding: 15px;
   margin: 2px;
@@ -126,16 +148,25 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .column {
     flex: 50%;
     max-width: 50%;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .column {
     flex: 100%;
     max-width: 100%;
   }
 }
+
+/*
+ * Somehow I need to take into account if the sidebar is open
+ * and produce a the same output for that possibility but with
+ * a different max-width value.
+ *
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+ *
+ */

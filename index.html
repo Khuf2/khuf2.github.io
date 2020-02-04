@@ -4,9 +4,13 @@
         
         <link rel="stylesheet" type="text/css" href="./styles/sticky.css">
         <link rel="stylesheet" type="text/css" href="./styles/lightbox.min.css">
+        <link rel="stylesheet" type="text/css" href="./styles/sidepanel.css">
+        <link rel="stylesheet" type="text/css" href="./styles/filter.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="./galleryImages/Cowboy Icon/cowboyClassic.small.png">
         <script src="javascript/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="javascript/sidepanel.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bangers|Dosis&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -18,6 +22,7 @@
   
         <div class="nav-wrapper">
           <div class="navbar bordered" id="navbar">
+              <a id="openbtn" class="openbtn" onclick="toggleNav()">☰</a>
               <a class="active" href="./index.html">Home</a>
               <a href="./bio.html">About Me</a>
               <a href="./fullGallery.html">Gallery</a>
@@ -29,13 +34,51 @@
         </div>
         <script type="text/javascript" src="./javascript/sticky.js"></script>
 
-        <div class="cover-style">
-          <div class="relative section-style">
-              <a href="http://instagram.com/skonchy_doo" target="_blank">
-                  <img height="400" width = "400" src="./galleryImages/hubris/hubris.jpg" alt="Error loading Hubris">
-              </a>
+
+        <div id="indexContent">
+          
+          <div id="cover-style">
+            <div class="section-style">
+                <a href="http://instagram.com/skonchy_doo" target="_blank">
+                    <img class="homeImage" src="./galleryImages/hubris/hubris.jpg">
+                </a>
+            </div>
           </div>
+          
+          <div class="sidepanel" id="mySidepanel" style="font-family: 'Dosis', sans-serif;">
+            <div id="sidebar">
+              
+              <img id="chip" src="https://i.imgur.com/IGTfQ1n.jpg">
+                
+              <div id="social">
+                <a class="icon" href="https://instagram.com/skonchy_doo" target="_blank"><i class="fa fa-instagram fa-4x icon-3d" aria-hidden="true"></i></a>
+                <a class="icon" href="https://www.linkedin.com/in/theo-novak/" target="_blank"><i class="fa fa-linkedin fa-4x icon-3d"></i></a>
+                <a class="icon" href="https://github.com/Khuf2" target="_blank"><i class="fa fa-github fa-4x icon-3d"></i></a>
+              </div>
+              
+              <div id="quoteDay">
+                <h1>Words to Live By:</h1>
+                <h4>"Seize the hams while they're ripe."</h4>
+              </div>
+              
+              <div class="post">
+                <h1 class="title">Latest Post</h1>
+                <div class="postPic">
+                  <a href="./galleryImages/deuce/deuce.jpg" data-lightbox="latestpost" data-title="Deuce"><img src= "./galleryImages/deuce/deuce.small.png"></a>
+                </div>
+                <p class="description">"Deuce" - Wilder's West IV</p>
+              </div>
+            </div>
+            <script src="javascript/sidepanel.js"></script>
+
+          </div>
+          <script type="text/javascript">
+            toggleNav();
+          </script>
+
         </div>
+
+
         <div class="footer">
           <p class="disclaimer">This work is the intellectual property of Theo Novak and should not be redistributed or printed without consent from the artist.</p>
           <p class="at">@skonchy_doo</p>
